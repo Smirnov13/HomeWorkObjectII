@@ -5,6 +5,12 @@ import org.junit.jupiter.api.Test;
 
 
 public class RadioTest {
+    @Test
+    public void testConstructor() {
+        Radio radio = new Radio();
+
+        Assertions.assertEquals(10, radio.getTotalWave());
+    }
 
     @Test
     public void testNext() {
@@ -105,6 +111,7 @@ public class RadioTest {
         radio.decreaseVolume();
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
+
     @Test
     public void testDecreaseVolume0() {
         Radio radio = new Radio();
